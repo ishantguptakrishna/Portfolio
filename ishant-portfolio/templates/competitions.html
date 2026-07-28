@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Competitions — Ishant Kumar Gupta{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container reveal in">
+    <div class="eyebrow">competitions.py</div>
+    <h1><span style="color:var(--violet)">list</span>[Competition] = [...]</h1>
+    <p>Hackathons and competitive events where I put ideas to the test under a clock.</p>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="container reveal">
+    <div class="trophy-case">
+      <div class="trophy-media" data-modal-img="{{ url_for('static', filename='images/certs/sih_hackathon.jpg') }}" data-modal-title="sih_2025_certificate.jpg">
+        <img src="{{ url_for('static', filename='images/certs/sih_hackathon.jpg') }}" alt="Smart India Hackathon 2025 participation certificate">
+      </div>
+      <div>
+        <div class="trophy-name">Smart India Hackathon 2025 — Internal Hackathon</div>
+        <div class="trophy-org">Ministry of Education · MoE's Innovation Cell · Poornima Institute of Engineering and Technology, Jaipur</div>
+        <p class="trophy-desc">Participated in the internal round of Smart India Hackathon 2025, held on 18th–19th September 2025 at PIET. Demonstrated creativity and innovation while collaborating on a problem statement under strict time constraints.</p>
+        <div class="trophy-meta">
+          <span>🏆 Certificate of Participation</span>
+          <span>📅 Sept 18–19, 2025</span>
+          <span>📍 Jaipur, Rajasthan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

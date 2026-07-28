@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% block title %}Ishant Kumar Gupta — Python & ML Developer{% endblock %}
+{% block content %}
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal in">
+      <div class="hero-kicker">$ whoami<span class="cursor"></span></div>
+      <h1>Hi, I'm <span class="accent" id="typed-name">Ishant Kumar Gupta</span></h1>
+      <p class="lede">A CS Engineering undergrad who turns data into decisions — building with Python, Machine Learning and clean web interfaces. Currently hunting for my first full-time role.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:gupta.ishant2004@gmail.com">Say hello →</a>
+        <a class="btn btn-ghost" href="{{ url_for('certifications') }}">View certifications</a>
+      </div>
+    </div>
+
+    <div class="reveal in">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <span class="title">bash — ishant@portfolio</span>
+        </div>
+        <div class="terminal-body">
+          <div class="line"><span class="prompt">ishant@piet</span>:<span class="path">~</span>$ cat profile.json</div>
+          <div class="line out">{</div>
+          <div class="line out">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="str">"CSE Undergrad, 2027"</span>,</div>
+          <div class="line out">&nbsp;&nbsp;<span class="key">"cgpa"</span>: <span class="str">"8.7 / 10"</span>,</div>
+          <div class="line out">&nbsp;&nbsp;<span class="key">"stack"</span>: [<span class="str">"Python"</span>, <span class="str">"Scikit-learn"</span>, <span class="str">"SQL"</span>],</div>
+          <div class="line out">&nbsp;&nbsp;<span class="key">"status"</span>: <span class="str">"open_to_work"</span></div>
+          <div class="line out">}</div>
+          <div class="line"><span class="prompt">ishant@piet</span>:<span class="path">~</span>$ <span style="opacity:.5">_</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container reveal">
+    <div class="eyebrow">about.py</div>
+    <h2 class="section-title"><span class="fn">def</span> about_me<span class="punc">():</span></h2>
+    <div class="about-grid" style="margin-top:28px;">
+      <div class="profile-photo-wrap">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Ishant Kumar Gupta profile photo">
+        <div class="tag">ishant.jpg</div>
+      </div>
+      <div class="about-text">
+        <p>I'm a third-year Computer Science Engineering student at <b>Poornima Institute of Engineering and Technology, Jaipur</b>, with a current CGPA of <b>8.7</b>. I enjoy building things that sit at the intersection of software and data — from ML models that predict outcomes to web apps that make information easy to use.</p>
+        <p>Over the last year I've interned in Python/ML and front-end development, earned NPTEL Elite certifications, and shipped a couple of projects I'm genuinely proud of. I'm currently looking for opportunities where I can keep learning fast and ship real, useful software.</p>
+        <div class="about-facts">
+          <div class="fact"><div class="num">8.7</div><div class="lbl">CGPA</div></div>
+          <div class="fact"><div class="num">100+</div><div class="lbl">DSA problems solved</div></div>
+          <div class="fact"><div class="num">9</div><div class="lbl">Certifications earned</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container reveal">
+    <div class="eyebrow">skills.py</div>
+    <h2 class="section-title"><span class="fn">import</span> skillset</h2>
+    <div class="import-block" style="margin-top:24px;">
+      <div><span class="k">from</span> languages <span class="k">import</span> <span class="m">Python</span>, <span class="m">C</span>, <span class="m">Cpp</span>, <span class="m">SQL</span>, <span class="m">HTML5</span>, <span class="m">CSS3</span> <span class="c"># Python (Advanced)</span></div>
+      <div><span class="k">from</span> ml_and_data <span class="k">import</span> <span class="m">ScikitLearn</span>, <span class="m">Pandas</span>, <span class="m">NumPy</span>, <span class="m">Matplotlib</span>, <span class="m">Seaborn</span>, <span class="m">FeatureEngineering</span></div>
+      <div><span class="k">from</span> tools <span class="k">import</span> <span class="m">AndroidStudio</span>, <span class="m">GCP</span>, <span class="m">VSCode</span>, <span class="m">Linux</span>, <span class="m">Git</span></div>
+      <div><span class="k">from</span> coursework <span class="k">import</span> <span class="m">MachineLearning</span>, <span class="m">DSA</span>, <span class="m">DBMS</span>, <span class="m">OS</span>, <span class="m">OOP</span></div>
+    </div>
+    <div class="skills-tags">
+      <span class="skill-tag hi">Python</span>
+      <span class="skill-tag">C / C++</span>
+      <span class="skill-tag">SQL (MySQL)</span>
+      <span class="skill-tag hi">Scikit-learn</span>
+      <span class="skill-tag">Pandas / NumPy</span>
+      <span class="skill-tag">Matplotlib / Seaborn</span>
+      <span class="skill-tag">HTML5 / CSS3</span>
+      <span class="skill-tag">Google Cloud Platform</span>
+      <span class="skill-tag">Git / GitHub</span>
+      <span class="skill-tag">Linux</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="container reveal">
+    <div class="eyebrow">experience.log</div>
+    <h2 class="section-title"><span class="fn">git</span> log --experience</h2>
+    <div class="gitlog" style="margin-top:32px;">
+      <div class="commit">
+        <div class="commit-head">commit e4c7f2a · May 2026 – July 2026</div>
+        <div class="commit-title">Data Science Intern — Deep Learning &amp; Computer Vision</div>
+        <div class="commit-sub">Celebal Technologies, Remote</div>
+        <ul>
+          <li>Built an end-to-end computer vision system to classify land-use types from satellite imagery and detect changes between two images of the same location over time.</li>
+          <li>Used transfer learning with a ResNet-18 backbone (pretrained on ImageNet), fine-tuned in two phases, improving validation accuracy from ~80% to over 95% on the EuroSAT dataset.</li>
+          <li>Designed a spatial, block-based train/validation split to prevent geographic data leakage in the satellite ML pipeline.</li>
+          <li>Deployed the full pipeline as an interactive Streamlit dashboard for live predictions and change-detection heatmaps.</li>
+        </ul>
+      </div>
+      <div class="commit">
+        <div class="commit-head">commit a1f9c2e · June 2025 – July 2025</div>
+        <div class="commit-title">Python &amp; Machine Learning Intern</div>
+        <div class="commit-sub">Kistechno Software Pvt. Ltd., Jaipur</div>
+        <ul>
+          <li>Architected supervised ML models using Scikit-learn, achieving a 15% increase in prediction accuracy through hyperparameter tuning.</li>
+          <li>Optimized data pipelines with Pandas &amp; NumPy, reducing cleaning time by 30% for datasets exceeding 50k rows.</li>
+          <li>Produced automated EDA reports using Matplotlib and Seaborn to identify critical business KPIs.</li>
+        </ul>
+      </div>
+      <div class="commit">
+        <div class="commit-head">commit 7d3b8a1 · July 2024</div>
+        <div class="commit-title">Web Development Intern</div>
+        <div class="commit-sub">Aerophantom, Jaipur</div>
+        <ul>
+          <li>Developed high-performance responsive web pages using Bootstrap, improving mobile-user accessibility by 20%.</li>
+          <li>Conducted cross-device testing and code minification, resulting in a 25% reduction in page load latency.</li>
+          <li>Integrated clean, modular UI components while collaborating in an Agile development environment.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container reveal">
+    <div class="eyebrow">projects.py</div>
+    <h2 class="section-title"><span class="fn">class</span> Projects<span class="punc">:</span></h2>
+    <div class="grid-2" style="margin-top:28px;">
+      <div class="card">
+        <div class="card-head"><h3>Satellite Land-Use Classification &amp; Change Detection</h3><span class="badge">95% val. accuracy</span></div>
+        <p class="stack">PyTorch · Transfer Learning · ResNet-18 · Computer Vision · Streamlit</p>
+        <ul>
+          <li>Built an end-to-end CV system to classify land-use types from satellite imagery and detect changes between two images of the same location over time.</li>
+          <li>Fine-tuned a ResNet-18 backbone in two phases (frozen → selectively unfrozen) on the EuroSAT dataset, raising validation accuracy from ~80% to over 95%.</li>
+          <li>Designed a spatial, block-based train/validation split to prevent geographic data leakage — a common pitfall in satellite ML.</li>
+          <li>Extracted image embeddings and used cosine similarity to localize changes between before/after pairs, visualized as a patch-based heatmap.</li>
+          <li>Deployed the full pipeline as an interactive Streamlit dashboard for live predictions and adjustable change-detection sensitivity.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>AI Resume Matcher</h3><span class="badge">92% precision</span></div>
+        <p class="stack">Python · NLP · Scikit-learn</p>
+        <ul>
+          <li>Built an intelligent ranking system using TF-IDF vectorization and cosine similarity to score resume–JD alignment.</li>
+          <li>Automated text preprocessing and keyword extraction to improve matching precision.</li>
+          <li>Optimized the parsing engine to process multiple files simultaneously, cutting manual screening time by 40%.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Diabetes Prediction System</h3><span class="badge">89% F1-score</span></div>
+        <p class="stack">Machine Learning · Python</p>
+        <ul>
+          <li>Developed an end-to-end diagnostic model achieving an 89% F1-score on the PIMA Indians dataset.</li>
+          <li>Implemented data normalization and handled class imbalance for clinically reliable predictions.</li>
+          <li>Visualized model performance using confusion matrices and ROC-AUC curves for detailed error analysis.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education" style="border-bottom:none;">
+  <div class="container reveal">
+    <div class="eyebrow">education.py</div>
+    <h2 class="section-title"><span class="fn">const</span> education <span class="punc">=</span> [ ]</h2>
+    <div class="gitlog" style="margin-top:32px;">
+      <div class="commit">
+        <div class="commit-head">2023 — 2027</div>
+        <div class="commit-title">B.Tech, Computer Science Engineering</div>
+        <div class="commit-sub">Poornima Institute of Engineering and Technology, Jaipur · CGPA 8.7</div>
+      </div>
+      <div class="commit">
+        <div class="commit-head">2023</div>
+        <div class="commit-title">Class 12th — 90.8%</div>
+        <div class="commit-sub">Sri Chaitanya Jr College</div>
+      </div>
+      <div class="commit">
+        <div class="commit-head">2021</div>
+        <div class="commit-title">Class 10th — 86%</div>
+        <div class="commit-sub">DAV Public School</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

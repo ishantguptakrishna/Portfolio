@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Certifications — Ishant Kumar Gupta{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container reveal in">
+    <div class="eyebrow">certifications.py</div>
+    <h1><span style="color:var(--violet)">class</span> Certifications:</h1>
+    <p>Every row below is a real, verifiable certificate. Click any entry to open it full-size — no download required.</p>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="container reveal">
+    <div class="cert-list">
+      {% for c in certs %}
+      <button class="cert-btn" data-modal-img="{{ url_for('static', filename=c.img) }}" data-modal-title="{{ c.file }}">
+        <span class="idx">{{ '%02d'|format(loop.index) }}</span>
+        <span class="icon">{{ c.short }}</span>
+        <span class="meta">
+          <span class="name">{{ c.title }}</span><br>
+          <span class="org">{{ c.org }}{% if c.duration %} · {{ c.duration }}{% endif %}</span>
+        </span>
+        {% if c.score %}<span class="score">{{ c.score }}</span>{% endif %}
+        <span class="chev">↗</span>
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Internships — Ishant Kumar Gupta{% endblock %}
+{% block content %}
+
+<section class="page-hero">
+  <div class="container reveal in">
+    <div class="eyebrow">internships.py</div>
+    <h1><span style="color:var(--violet)">def</span> internships():</h1>
+    <p>Hands-on experience across data science and front-end engineering — each with a certificate to back it up. Click a certificate to zoom in.</p>
+  </div>
+</section>
+
+<section class="section" style="border-bottom:none;">
+  <div class="container">
+    {% for it in internships %}
+    <div class="intern-row reveal">
+      <div class="intern-media" data-modal-img="{{ url_for('static', filename=it.img) }}" data-modal-title="{{ it.file }}">
+        <img src="{{ url_for('static', filename=it.img) }}" alt="{{ it.company }} internship certificate">
+        <span class="zoom-hint">🔍 view certificate</span>
+      </div>
+      <div>
+        <div class="intern-badge">INTERNSHIP {{ '%02d'|format(loop.index) }}</div>
+        <div class="intern-role">{{ it.role }}</div>
+        <div class="intern-company"><b>{{ it.company }}</b> — {{ it.location }}</div>
+        {% if it.summary %}<p style="color:var(--text-muted); font-size:0.92rem; margin: 0 0 14px;">{{ it.summary }}</p>{% endif %}
+        {% if it.project_name %}<div style="font-family:var(--mono); font-size:0.85rem; color:var(--amber); margin-bottom:8px;">Project: {{ it.project_name }}</div>{% endif %}
+        <ul>
+          {% for point in it.points %}<li>{{ point }}</li>{% endfor %}
+        </ul>
+        {% if it.skills %}
+        <div class="skills-tags" style="margin-top:16px;">
+          {% for s in it.skills %}<span class="skill-tag">{{ s }}</span>{% endfor %}
+        </div>
+        {% endif %}
+        <div class="intern-duration">📅 {{ it.duration }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
